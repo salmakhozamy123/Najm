@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    direction: rtl;
+}
+body {
+    background-color: #F6F6F6 !important;
+}
+/* html, body { height: 100%; background-color: #b91f1f; } */
+/* body { margin: 0; background-color: #b91f1f; } */
+
+/* html, body { height: 100%; }
+body { margin: 0; } */

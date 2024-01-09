@@ -1,0 +1,25 @@
+<div class="contain">
+    <div class="w-100 d-flex flex-column justify-content-end" style="direction: rtl !important;">
+        <div class="label">البيانات او المستندات الداعمة للإشتباه</div>
+        <label class="attach text-end" for="attach"> ارفق من هنا <img src="assets/uploadicon.svg" class="pe-2" /> </label>
+        <input  type="file" id="attach" name="attach"  (change)="onFileSelected($event)" multiple>
+       </div>
+       
+        <div class="border">
+            <div class="text">الصور و الفيديوهات ({{imageNo}})</div>
+            <div class="images">
+             <div *ngFor="let file of imageFiles" style="max-width: max-content;" >
+               <img [src]="file.url" alt="{{ file.name }}" class="preview-image" >
+             </div>
+            </div>
+           </div>
+           <div class="border">
+             <div class="text">الملفات ({{fileNo}}) </div>
+             <div class="images">
+              <div *ngFor="let file of otherFiles" style="max-width: max-content;" >
+               <div class="preview-file">{{ file.name }}</div>
+              </div>
+             </div>
+            </div>
+    
+</div>

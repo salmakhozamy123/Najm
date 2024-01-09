@@ -1,0 +1,105 @@
+<div class="box">
+    <div id="title">بيانات البلاغ </div>
+    <hr>
+
+    <div id="subTitle">من فضلك, قم بملئ الإستمارة التالية </div>
+
+    <form class="contain needs-validation" id="form" [formGroup]="reportdataForm"  (submit)="formOperation($event)">
+    <div class="smallInput">
+      <div class="inputandlabel">
+        <label class="label" for="country">المدينة</label>
+        <app-select  title="المدينة"  name="country"  class="boxselect w-100"></app-select>
+       </div>
+       <div class="inputandlabel">
+        <label class="label" for="branch">الفرع</label>
+        <app-select title="الفرع" name="branch"  class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  ></app-select>
+      </div>
+      <div class="inputandlabel">
+        <label class="label" for="Administration">الإدارة</label>
+        <app-select  name="Administration" id="Administration"  class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  
+        [ngClass]="{ 'is-invalid': getAdministration.invalid && (getAdministration.dirty || getAdministration.touched) }" ></app-select>
+        <ng-container *ngIf="getAdministration.invalid && (getAdministration.dirty || getAdministration.touched)">
+          <div *ngIf="getAdministration.hasError('required')" class="form-text text-danger">Please enter your email!</div>
+      </ng-container>
+
+      </div>
+      <div class="inputandlabel">
+        <label class="label" for="chanel">القناة المستخدمة لرفع البلاغ</label>
+        <!-- <app-select title="القناة المستخدمة لرفع البلاغ" name="chanel" class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  ></app-select> -->
+        <input class="form-control boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  type="text" id="chanel" name="chanel" required formControlName="chanel"/> 
+        <ng-container *ngIf="getchanel.touched">
+          <div *ngIf="getchanel.hasError('required')" class="form-text text-danger" >Please fill your name!</div>
+        </ng-container>
+      </div>
+    </div>
+   
+    <div class="input-group">
+        <label for="username" class="label">أسماء الأشخاص المشتبه بهم</label>
+        <button class="btn button" type="button" id="button-addon1"  (click)="onClick()"><i class="bi bi-plus-lg" style="color: #33835C;"></i></button>
+        <input type="text" class="form-control input" placeholder="اسم الشخص" [(ngModel)]="username" id="username" name="username" (keydown.enter)="onClick()">
+      </div>
+      <div *ngIf="usernames && usernames.length > 0" class="names">
+        <div *ngFor="let user of usernames" class="input-group" style="max-width: max-content;">
+          <button class="btn buttonexit" type="button" id="button-addon2" (click)="removeUsername(user)">
+            <i class="bi bi-x"></i>
+          </button>
+          <div class="nameText form-control ">{{ user }} </div>
+        </div>
+      </div>
+      <hr/>
+
+      <div class="smallInput justStart">
+        <div class="inputandlabel">
+          <label class="label"  for="timeOfViolationWasCommitted">تاريخ إرتكاب المخالفة</label>
+          <app-calendar name="timeOfViolationWasCommitted"></app-calendar>
+        </div>
+        <div class="inputandlabel">
+          <label class="label" for="DateOfKnowledgeViolation">تاريخ العلم بالمخالفة</label>
+          <app-calendar  name="DateOfKnowledgeViolation"></app-calendar>
+        </div>
+        <div class="inputandlabel">
+          <label class="label"> مكان حدوث المخالفة </label>
+          <app-calendar></app-calendar>
+        </div>
+      </div>
+      <hr/>
+
+     <!-- <div class="w-100 d-flex flex-column justify-content-end" style="direction: rtl !important;">
+      <div class="label">البيانات او المستندات الداعمة للإشتباه</div>
+      <label class="attach text-end" for="attach"> ارفق من هنا <img src="assets/uploadicon.svg" class="ps-2" /> </label>
+      <input  type="file" id="attach" name="attach"  (change)="onFileSelected($event)" multiple>
+     </div>
+     
+    <div class="border">
+     <div class="text">الصور و الفيديوهات (4)</div>
+     <div class="images">
+      <div *ngFor="let file of imageFiles" style="max-width: max-content;" >
+        <img [src]="file.url" alt="{{ file.name }}" class="preview-image" >
+      </div>
+     </div>
+    </div>
+    <div class="border">
+      <div class="text">الملفات (1) </div>
+      <div class="images">
+       <div *ngFor="let file of otherFiles" style="max-width: max-content;" >
+        <div class="preview-file">{{ file.name }}</div>
+       </div>
+      </div>
+     </div> -->
+
+
+     <app-upload-file> </app-upload-file>
+     <hr>
+
+    <div>
+      <label for="textarea" class="label">نص البلاغ</label>
+       <app-textarea name="textarea"></app-textarea>
+    </div>
+      </form>
+
+</div>
+
+<div class="buttons">
+  <button type="submit" class="btn buttonBackFront frontBtn" [disabled]="!reportdataForm.valid" cdkStepperNext><i class="bi bi-arrow-left pe-2 pt-1"></i> التالي</button>
+  <button class="btn buttonBackFront backBtn" routerLink="/about"> رجوع <i class="bi bi-arrow-right ps-2 pt-1"></i></button>
+</div>

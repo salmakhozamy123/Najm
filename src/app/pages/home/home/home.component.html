@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="logoImage" src="assets/logo.svg"/>
+    <div id="homeCard">
+        <div id="homeText">من فضلك, اختر نوع المستخدم</div>
+        <img style="width: 100%;" src="assets/Line.svg"/>
+          <div class="col-12 cardds">
+            <div [class.activecardd]="activeDiv === 'reportRef'" class="col-6 cardd" (click)="toggleActive('reportRef')">مراجع البلاغات   
+             <img *ngIf="activeDiv === 'reportRef'" class="checkicon" src="assets/check.svg"/>
+            </div>
+            <div [class.activecardd]="activeDiv == 'visitor'" class="col-6 cardd" (click)="toggleActive('visitor')">زائر
+              <img *ngIf="activeDiv == 'visitor'" class="checkicon" src="assets/check.svg"/>
+            </div>
+            <div [class.activecardd]="activeDiv === 'auditor'" class="col-6 cardd" (click)="toggleActive('auditor')">مدقق الحسابات
+            <img *ngIf="activeDiv === 'auditor'" class="checkicon" src="assets/check.svg"/>
+            </div>
+            <div [class.activecardd]="activeDiv === 'reportAuditor'" class="col-6 cardd" (click)="toggleActive('reportAuditor')">مدقق البلاغات
+            <img *ngIf="activeDiv === 'reportAuditor'" class="checkicon" src="assets/check.svg"/>
+            </div>
+          </div>
+          <img style="width: 100%;" src="assets/Line.svg"/>
+          <button [class.activebutton]="activeDiv !== null" [disabled]="isButtonDisabled" class="btn button" (click)="navigateTo()">التالي</button>
+    </div>
+
+   
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+#title {
+    color: rgba(0, 0, 0, 0.70);
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+.contain {
+    padding: 52px 60px;
+    text-align: right;
+}

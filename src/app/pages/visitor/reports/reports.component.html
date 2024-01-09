@@ -1,0 +1,22 @@
+<app-img-nav></app-img-nav>
+<div class="contain">
+    <div id="title">تقديم بلاغ</div>
+    <img src="assets/VRL.svg" />
+
+    <app-stepper [linearModeSelected]="false">
+        <cdk-step [label]="'تصنيف البلاغ'">
+           <app-report-classification></app-report-classification>
+        </cdk-step>
+        <cdk-step [label]="'نوع البلاغ'">
+            <app-report-type></app-report-type>
+        </cdk-step>
+        <cdk-step [label]="'بيانات البلاغ'">
+            <app-report-data></app-report-data>
+        </cdk-step>
+        <cdk-step [label]="'معاينة البلاغ'">
+            <app-report-preview></app-report-preview>
+        </cdk-step>
+    </app-stepper>
+
+
+</div>

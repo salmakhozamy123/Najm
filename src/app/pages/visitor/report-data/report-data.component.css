@@ -1,0 +1,305 @@
+* {
+    direction: ltr !important;
+  }
+  .box {
+      width: 100%;
+      margin-top: 40px;
+      padding: 30px 32px;
+      border-radius: 10px;
+      border: 1px solid #E6E6E6;
+      background: #EFEFEF;
+    }
+    #title {
+      color: rgba(0, 0, 0, 0.80);
+      text-align: right;
+      font-family: Tajawal;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    #subTitle {
+      color: rgba(0, 0, 0, 0.70);
+      text-align: right;
+      font-family: Tajawal;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+    }
+  .contain {
+      border-radius: 10px;
+      background: #F6F6F6;
+      width: 100%;
+      margin-top: 15px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 30px;
+  }
+  .smallInput {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      direction: rtl !important;
+      gap: 30px 0px;
+      margin: 0px;
+      width: 100%;  
+  }
+  .buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .buttonBackFront {
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 12px 17px; 
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+  }
+  .backBtn {
+    border: 1px solid #33835C;
+    background: #FFF;
+    color: #33835C;
+  }
+  .backBtn:focus:active {
+    background: #33835C;
+    border: 1px solid #33835C;
+    color: #FFF;
+  }
+  .frontBtn {
+    background: #33835C;
+    border: 1px solid #33835C;
+    color: #FFF;
+  }
+  .frontBtn:focus:active {
+    border: 1px solid #33835C;
+    background: #FFF;
+    color: #33835C;
+  }
+  .inputandlabel {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+  }
+  .x {
+    position: relative;
+    width: 100%;
+  }
+  .select {
+    width: 100%;
+    display: flex;
+    height: 48px;
+    padding: 0px 16px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    color: #656565;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .select::-ms-expand {
+    display: none; /* Remove the default arrow in IE/Edge */
+  }
+  /* Additional styling for the arrow */
+  .select:after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the right position as needed */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333; /* Arrow color */
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  .custom-select-container {
+    position: relative;
+    display: inline-block;
+  }
+  .img {
+    position: absolute; 
+    bottom:19px;
+    left: 16px;
+  }
+  .label {
+    color: #1E1E1E;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .input {
+    display: flex;
+    height: 48px;
+    padding: 0px 16px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    color: #656565;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .button {
+    border-radius: 9px 0px 0px 9px !important;
+    border: 1px solid #DBDBDB;
+    background: rgba(51, 131, 92, 0.06);
+  }
+  .nameText {
+    color: rgba(0, 0, 0, 0.80);
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 60px;
+    border: 1px solid #33835C;
+    background: #FFF;
+    width: max-content;
+    height: 32px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonexit {
+    border-radius: 60px;
+    border: 1px solid #33835C;
+    background: #33835C;
+    color: #FFF;
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+  .names {
+    display: flex;
+    gap: 27px;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+  }
+  /* .preview-image {
+    width: 137.143px;
+    height: 120px;
+    border-radius: 10px;
+  } */
+  /* .preview-file {
+    width: max-content;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(215, 77, 82, 0.14);
+    background: rgba(220, 96, 101, 0.10); 
+    color: #D74D52;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    flex-wrap: wrap;
+  } */
+  /* .border {
+    padding: 24px 24px 24px 45px;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    background: #FFF;
+  } */
+  /* .images {
+    display: flex;
+    gap: 32px;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  } */
+  /* .text {
+    color: #414345;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 24px;
+  } */
+  /* .attach {
+    border-radius: 10px;
+    border: 1px solid #33835C;
+    background: rgba(51, 131, 92, 0.10);
+    padding: 12px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #33835C;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: max-content;
+  } */
+  input[type="file"] {
+    display: none;
+  }
+  .justStart {
+    justify-content: start;
+    gap: 33px;
+  }
+  @media (max-width:1400px) {
+    .inputandlabel {
+      width: 30%;
+
+    }
+  }
+  @media (max-width:900px) {
+    .inputandlabel {
+      width: 40%;
+    }
+  }
+  @media (max-width:765px) {
+    .inputandlabel {
+      width: 100%;
+    }
+  }
+  @media (max-width:600px){
+    .smallInput {
+      flex-direction: row;
+    }
+    .boxselect {
+      width: 100%;
+    }
+
+  }
+
+
+  
+  
+  
+  

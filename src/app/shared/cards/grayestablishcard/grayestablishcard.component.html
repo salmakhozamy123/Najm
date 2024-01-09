@@ -1,0 +1,42 @@
+<div class="contain">
+  <!-- <div class="d-flex justify-content-between" > -->
+
+         <app-tab class="w-100">
+          <ng-container title>
+            <div class="flex">
+              <div class="title">{{title}}</div>
+              <div  id="greentext">{{reportNo}}</div>
+              <!-- <div class="backgroundBox">{{reportStatus}}</div> -->  
+          </div>
+          </ng-container>
+          <ng-container content1>
+             
+            <app-tab></app-tab>
+ 
+          </ng-container>
+          <ng-container content2>
+                       
+              <div class="cardinsidecard">
+                <span class="title" style="padding-bottom: 8px;">{{subTitle}}</span>
+                <app-accordion class="w-100" title="تصنيف البلاغ" (accordionToggled)="handleAccordionToggle($event)">
+                  <app-white-card [cord]="true" backgroundColor="#F6F6F6" [divs]="['غسل اموال او تمويل إرهاب','مخالفة لمدونة قواعد السلوك']"></app-white-card>
+                </app-accordion>
+                <app-accordion class="w-100" title="نوع البلاغ"  (accordionToggled)="handleAccordionToggle($event)">
+                  <app-white-card  backgroundColor="#F6F6F6" [cord]="true"  [divs]="['الإفصاح عن معلومات سرية بطريقة غير نظامية','سوء استخدام السلطة او اتخاذ القرار']"></app-white-card>
+                </app-accordion>
+                <app-accordion class="w-100" title="بيانات البلاغ">
+                  <app-dataviewcard backgroundColor="#F6F6F6"  borderr="1px solid #E6E6E6" paddingg="16px"></app-dataviewcard>
+                </app-accordion>
+                <app-accordion class="w-100" title="المستندات الداعمة للإشتباه ">
+                  <app-documents-supporting-the-suspicion  [cord]="true"></app-documents-supporting-the-suspicion>
+                </app-accordion>
+              </div>
+
+         </ng-container>
+         </app-tab>
+  <!-- </div> -->
+
+  <ng-content select="[addnotes]"></ng-content>
+
+
+</div>

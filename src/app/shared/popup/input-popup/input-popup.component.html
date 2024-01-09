@@ -1,0 +1,19 @@
+
+  <div class="header"> 
+    <span>نوع البلاغ</span>
+    <span (click)="closeDialog()"><i class="bi bi-x"></i></span>
+  </div>
+  <div class="contain">
+  <!-- <app-textarea name="textarea"></app-textarea> -->
+  <div>
+    <label id="desc">يرجي كتابة نوع البلاغ</label>
+    <textarea class="textarea" id="textarea" name="textarea" rows="4" cols="50" placeholder="اكتب هنا"></textarea>
+  </div>
+
+<div style="display: flex; justify-content: end !important;">
+  <button class="btn button" (click)="saveData()">حفظ</button>
+</div>
+</div>
+
+
+<!-- <textarea [(ngModel)]="textareaValue" -->

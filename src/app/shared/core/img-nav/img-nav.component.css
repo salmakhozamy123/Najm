@@ -1,0 +1,16 @@
+#mainImg {
+    width: 100%;
+    z-index: -1;
+}
+#mainText {
+    position: absolute;
+    top: 210px;
+    right: 60px;
+    color: #FFF;
+    text-align: center;
+    font-family: Tajawal;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+}

@@ -1,0 +1,154 @@
+.steppers{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.step {
+    display: flex;
+    gap: 7px; 
+    width: max-content;
+    align-items: center;
+    justify-content: start;
+} 
+.stepword {
+    width: max-content;
+    color: #33835C;
+    font-family: Tajawal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+} 
+.stepicon {
+    color: #33835C;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #33835C;
+    background: #FFF;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+} 
+
+.line {
+    border: 1px solid #33835C;
+    width: 50%;
+    height: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.step:last-child .line {
+    display: none;
+}
+
+/* button.nav-link {
+    background-color: #e9ecef;
+    border-radius: 0;
+    border: none;
+    color: #333;
+} */
+
+/* */
+
+/* .boxcard {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px;
+    gap: 10px;
+    border: 2px solid yellow;
+} */
+
+
+.salma {
+    background-color: #becfb0;
+}
+
+
+
+
+
+
+
+/* .progress-bar {
+    display: flex;
+    margin: 40px 0;
+    flex-direction: row;
+
+}
+
+.progress-bar .step {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.progress-bar .step p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+.progress-bar .step .bullet {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+   
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 44px;
+    background: #262626;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+} 
+.progress-bar .step .bullet:after {
+    background: #d43f8d;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear infinite;
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1)
+    }
+}
+.progress-bar .step span {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.progress-bar .step .check {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+}
+
+ */

@@ -1,0 +1,32 @@
+<div class="box">
+    <div id="title">نوع البلاغ </div>
+    <hr>
+    <div id="subTitle">يمكنك تحديد أكثر من إختيار</div>
+  
+<div class="cards">
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='1' (click)="toggleActive(1)"  cardTitle="سوء استخدام السلطة او اتخاذ القرار" icon="downrowicon"></app-simple-card>  
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='2' (click)="toggleActive(2)"  cardTitle="احتيال او فساد او رشوة او اختلاس او تزوير" icon="moneyicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='3' (click)="toggleActive(3)"  cardTitle="مخالفة الانظمة واللوائح والتعليمات والسياسات التى يجب اتباعها حسب مقتضيات نطاق عمل الشركة" icon="fileicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='4' (click)="toggleActive(4)"  cardTitle="المخالفات المتعلقة بالبيئة والصحة والسلامة فى الشركة" icon="policiyicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='5' (click)="toggleActive(5)"  cardTitle="الإفصاح عن معلومات سرية بطريقة غير نظامية" icon="existfileicon"></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='6' (click)="toggleActive(6)"  cardTitle="الإخفاء بسوء نية او الإهمال او اتلاف الوثائق الرسمية  او التستر عن التقارير المالية الاحتيالية" icon="existicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='7' (click)="toggleActive(7)"  cardTitle="التصرفات الغير لائقة المخالفة للنظام العام والأداب الإسلامية والعادات والتقاليد  " icon="accidenticon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='8' (click)="toggleActive(8)"  cardTitle="سوء استخدام ممتلكات الشركة" icon="caricon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='9' (click)="toggleActive(9)"  cardTitle="الإهمال الجسيم الذى يترتب عليه الإضرار بالشركة" icon="downrowicon"></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='10' (click)="toggleActive(10)" cardTitle="التستر على اى من المخالفات أعلاه" icon="caricon"></app-simple-card>  
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='11' (click)="toggleActive(11)" cardTitle="تمرير عمليات غير نظامية او التحايل على الانظمة او التستر على أخطاء النظام" icon="tmrer" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='12' (click)="toggleActive(12)" cardTitle="سوء استخدام الصلاحيات الممنوحة" icon="basicfileicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='13' (click)="toggleActive(13)" cardTitle="تضارب في المصالح في اي من الاعمال او العقود" icon="downrowicon" ></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='14' (click)="toggleActive(14)" cardTitle="الحصول على منافع او مكافأت غير مستحقة" icon="caricon"></app-simple-card>
+     <app-simple-card class="cardd col-sm-12 col-md-5 col-xl-3"  [divNumber]='15' (click)="openDialog()" cardTitle="أخري..." icon="moreicon" ></app-simple-card>
+ </div>
+
+</div>
+
+<div class="buttons">
+    <button class="btn backBtn"  cdkStepperPrevious><i class="bi bi-arrow-right ps-2 pt-1"></i> رجوع</button>
+    <button class="btn frontBtn" (click)="toggleActive(0)" [disabled]="activeDivs.length === 0"  cdkStepperNext>التالي<i class="bi bi-arrow-left pe-2 pt-1"></i> </button>
+</div>
+ 
+
+

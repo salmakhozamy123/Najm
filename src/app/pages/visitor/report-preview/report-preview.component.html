@@ -1,0 +1,24 @@
+<div class="box">
+    <div id="title">معاينة البلاغ </div>
+    <hr>
+    <div class="contain">
+      <app-white-card title="تصنيف البلاغ" [divs]="['غسل اموال او تمويل إرهاب','مخالفة لمدونة قواعد السلوك']"></app-white-card>
+      <app-white-card title="نوع البلاغ" [divs]="['الإفصاح عن معلومات سرية بطريقة غير نظامية','سوء استخدام السلطة او اتخاذ القرار']"></app-white-card>
+      <app-white-card title="بيانات البلاغ" >
+        <div class="data">
+         <app-dataviewcard style="width: 100%;"></app-dataviewcard> 
+         <app-documents-supporting-the-suspicion style="width: 100%;"></app-documents-supporting-the-suspicion>
+
+         
+        </div>
+      </app-white-card>
+    </div>
+
+
+
+</div>
+
+<div class="buttons">
+  <button class="btn frontBtn"  cdkStepperNext><i class="bi bi-arrow-left pe-2 pt-1"></i> التالي </button>
+    <button class="btn backBtn" cdkStepperPrevious> رجوع <i class="bi bi-arrow-right ps-2 pt-1"></i></button>
+</div>
