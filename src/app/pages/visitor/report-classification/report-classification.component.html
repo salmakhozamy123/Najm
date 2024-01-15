@@ -9,15 +9,18 @@
         <app-simple-card class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='3' (click)="toggleActive(3)" cardTitle="مخالفة للانظمة والتعليمات" icon="eduactionicon" ></app-simple-card>
         <app-simple-card class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='4' (click)="toggleActive(4)" cardTitle="مخالفة لسياسة وإجراءات الشركة" icon="policiyicon" ></app-simple-card>
         <app-simple-card class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='5' (click)="toggleActive(5)" cardTitle="مخالفة لمدونة قواعد السلوك" icon="caricon"></app-simple-card>
-        <app-simple-card class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='6'  (click)="openDialog()" cardTitle="أخري..." icon="moreicon" ></app-simple-card>
+        <app-simple-card class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='6' (click)="openDialog()" cardTitle="أخري..." icon="moreicon" ></app-simple-card>
     </div>
 
 </div>
 
  
 <div class="buttons">
-    <button class="btn backBtn" routerLink="/about"><i class="bi bi-arrow-right ps-2 pt-1"></i> رجوع</button>
-    <button class="btn frontBtn" (click)="toggleActive(0)" [disabled]="activeDivs.length === 0" cdkStepperNext>التالي<i class="bi bi-arrow-left pe-2 pt-1"></i> </button>
-    <!-- <app-full-button [method]="toggleActive.bind(this, 0)" [array]="activeDivs"><button class="btn" cdkStepperNext></button></app-full-button> -->
-</div>
+    <button class="btn backBtn" routerLink="/about"><i class="bi bi-arrow-right ps-2 pt-1"></i> رجوع</button> 
+    <button class="btn frontBtn"  [disabled]="activeDivs.length === 0" cdkStepperNext (click)="test()">التالي<i class="bi bi-arrow-left pe-2 pt-1"></i> </button>
+  </div>
+
+
+
+
 

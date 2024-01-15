@@ -1,0 +1,18 @@
+<!-- <app-popup-card>
+    <div class="d-flex justify-content-center align-item-center">
+       <img src="assets/check2.svg"/>
+       <div id="text">تم إعتماد البلاغ رقم <span style="color: #33835C;">#123</span> كبلاغ رسمي وسيتم مراجعته من قبل مدقق البلاغات  </div>
+       <button class="btn greenbutton"> </button>
+    </div>
+</app-popup-card> -->
+
+<div class="header">
+    <span>نوع البلاغ</span>
+    <span (click)="closeDialog()"><i class="bi bi-x"></i></span>
+</div>
+<div class="contain">
+        <!-- <img src="assets/check2.svg"/> -->
+        <div class="checkicon"><i class="bi bi-check-lg"></i></div>
+        <div id="text">تم إعتماد البلاغ رقم <span style="color: #33835C;">#123</span> كبلاغ رسمي وسيتم مراجعته من قبل مدقق البلاغات  </div>
+        <button class="btn greenbutton"  (click)="onclick()"> العودة للرئيسية </button>
+</div>

@@ -1,74 +1,52 @@
-<div class="contain">
 
-<div class="steppers">
-  <div class="step col-sm-4 col-md-3 col-lg" *ngFor="let step of steps; let i=index" (click)="onClick(i)" [class.salma]="selectedIndex === i">
-    <div class="stepicon">1</div>
-    <div class="stepword">{{step.label}}</div>
-    <div class="line"> </div>
+<div class="contain">
+  <div class="steppers" >
+    <div class="step col-md-5 col-lg" (click)="onClick(i)" *ngFor="let step of steps; let i=index" [ngClass]="{'greenLine': i <= lastStepCompleted , 'active': selectedIndex === i}">
+      <div class="stepicon" [ngClass]="{'laststep': i <= lastStepCompleted}">
+        <ng-container *ngIf="i <= lastStepCompleted; else stepIcon">
+          <i class="bi bi-check-lg"></i>
+        </ng-container>
+        <ng-template #stepIcon>{{i + 1}}</ng-template>
+      </div>
+      <div class="stepword" [ngClass]="{'laststepword': i <= lastStepCompleted}">{{step.label}}</div>
+    </div>
   </div>
+
+  <div *ngIf="selected">
+    <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+  </div>
+
 </div>
 
-  
-    <div *ngIf="selected">
-      <ng-container [ngTemplateOutlet]="selected.content" ></ng-container>
-   </div>
-   
-  </div>
 
 
 
 
 
-  <!-- <div class="progress-bar">
-    <div class="step"> 
-      <p>name</p>
-      <div class="bullet">
-        <span>1</span>
-      </div>
-      <div class="check fas fa-check"></div>
-    </div>
-    <div class="step"> 
-      <p>contact</p>
-      <div class="bullet">
-        <span>2</span>
-      </div>
-      <div class="check fas fa-check"></div>
-    </div>
-    <div class="step"> 
-      <p>birthday</p>
-      <div class="bullet">
-        <span>3</span>
-      </div>
-      <div class="check fas fa-check"></div>
-    </div>
-    <div class="step"> 
-      <p>submit</p>
-      <div class="bullet">
-        <span>4</span>
-      </div>
-      <div class="check fas fa-check"></div>
-    </div>
+<!-- <mat-horizontal-stepper linear>
+    <mat-step label="shipping" [completed]="classificationForm?.form?.valid">
+       <ng-content select="[1]"> </ng-content>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="address" completed=true>
+      <ng-content select="[2]"> </ng-content>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="order" completed=false>
+        <ng-content select="[3]"> </ng-content>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="order" completed=false>
+        <ng-content select="[4]"> </ng-content>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </mat-step>
 
-  </div> -->
+    
+</mat-horizontal-stepper>   -->
 
 
 
-
-  
-  
-      <!-- <div class="steppers">
-      <div *ngFor="let step of steps; let i=index">
-  
-            <div 
-              (click)="onClick(i)"
-              [class.salma]="selectedIndex === i"
-              class="boxcard nav-link py-3 text-uppercase fw-bold">
-             <div class="stepicon">1</div> 
-             <div class="stepword">{{step.label}}</div>
-             <div class="line"> </div>
-            </div>
-  
-         </div>
-    </div> -->
-  
-  

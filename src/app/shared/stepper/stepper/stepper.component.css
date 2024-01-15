@@ -1,3 +1,4 @@
+
 .steppers{
     display: flex;
     flex-direction: row;
@@ -7,148 +8,74 @@
 }
 .step {
     display: flex;
-    gap: 7px; 
-    width: max-content;
     align-items: center;
     justify-content: start;
+    counter-reset: step;
+    position: relative;
+    cursor: pointer;
+
 } 
 .stepword {
-    width: max-content;
-    color: #33835C;
     font-family: Tajawal;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-} 
-.stepicon {
-    color: #33835C;
+}
+.step > .stepicon {
     font-family: Tajawal;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; 
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    border: 1px solid #33835C;
-    background: #FFF;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid  #ddd;
+    display: block;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-} 
-
-.line {
-    border: 1px solid #33835C;
-    width: 50%;
-    height: 1px;
-    display: flex;
-    align-items: center;
+    background-color: #FFF;
+    z-index: 1;
 }
-
-.step:last-child .line {
-    display: none;
+.stepword {
+    background-color: #FFF;
+    z-index: 1;
+    padding:0px 10px;
 }
-
-/* button.nav-link {
-    background-color: #e9ecef;
-    border-radius: 0;
-    border: none;
-    color: #333;
-} */
-
-/* */
-
-/* .boxcard {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 0px;
-    gap: 10px;
-    border: 2px solid yellow;
-} */
-
-
-.salma {
-    background-color: #becfb0;
-}
-
-
-
-
-
-
-
-/* .progress-bar {
-    display: flex;
-    margin: 40px 0;
-    flex-direction: row;
-
-}
-
-.progress-bar .step {
-    position: relative;
-    text-align: center;
+.step:after {
+    content: '';
+    position: absolute;
     width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 17px;
+    border-radius: 1px;
 }
-.progress-bar .step p {
-    font-size: 18px;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 8px;
+.step:last-child:after {
+    content: none;
 }
-.progress-bar .step .bullet {
-    position: relative;
-    height: 25px;
-    width: 25px;
-    border: 2px solid #000;
-    display: inline-block;
-    border-radius: 50%;
-   
+.active > div {
+    color: #33835C;
 }
-.progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after {
-    display: none;
+.active > .stepicon {
+    border: 1px solid #33835C;
 }
-
-.progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after {
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 44px;
-    background: #262626;
-    content: '';
-    bottom: 11px;
-    right: -51px;
-} 
-.progress-bar .step .bullet:after {
-    background: #d43f8d;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 0.3s linear infinite;
+.laststep {
+    background-color: #33835C !important;
+    color: #FFF;
+    line-height: 33px !important;
+    z-index: 1;
 }
-@keyframes animate {
-    100% {
-        transform: scaleX(1)
-    }
+.laststepword {
+    color: #33835C !important;
 }
-.progress-bar .step span {
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 25px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-.progress-bar .step .check {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
+.greenLine:after {
+    background-color: #33835C;
 }
 
- */
+
+
+
+
+
+

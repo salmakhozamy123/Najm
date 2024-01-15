@@ -8,14 +8,21 @@
         <div class="border">
             <div class="text">الصور و الفيديوهات ({{imageNo}})</div>
             <div class="images">
-             <div *ngFor="let file of imageFiles" style="max-width: max-content;" >
-               <img [src]="file.url" alt="{{ file.name }}" class="preview-image" >
-             </div>
+              <div *ngFor="let file of imageFiles" class="image-container">
+              <div style="position: relative;">  
+                <img [src]="file.url" alt="{{ file.name }}" class="preview-image">
+                <div class="expand">
+                  <img src="assets/deleteicon.svg" alt="Delete Icon">
+                  <img src="assets/expandicon.svg" alt="Expand Icon">
+                </div>
+              </div>
+              </div>
+              
             </div>
            </div>
            <div class="border">
              <div class="text">الملفات ({{fileNo}}) </div>
-             <div class="images">
+             <div class="files">
               <div *ngFor="let file of otherFiles" style="max-width: max-content;" >
                <div class="preview-file">{{ file.name }}</div>
               </div>

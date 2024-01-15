@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SemitransparentButtonComponent {
  @Input() name:string = 'عودة'
+ @Input() icon:string =''
+ @Input() paddingg:string = '5px 7px'
 }

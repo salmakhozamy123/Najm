@@ -1,4 +1,5 @@
-import { Component, Inject, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Inject, Output, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MatCheckbox } from '@angular/material/checkbox';
 import {MatDialog} from '@angular/material/dialog';
 
@@ -16,9 +17,11 @@ export interface DialogData {
 export class ReportClassificationComponent {
 
   constructor(public dialog: MatDialog) {}
+  @ViewChild('classificationForm', { static: true }) form?: NgForm;
+  @Output() activeDivsChange: EventEmitter<number[]> = new EventEmitter<number[]>();
 
   activeDivs: number[] = [];
-
+  @ViewChild(InputPopupComponent) inputPopup!: InputPopupComponent;
 
   toggleActive(divNumber: number) {
     const index = this.activeDivs?.indexOf(divNumber);
@@ -29,18 +32,21 @@ export class ReportClassificationComponent {
       this.activeDivs?.splice(index, 1);
     }
     console.log(this.activeDivs);
-
+    this.activeDivsChange.emit(this.activeDivs);
     
   }
 
   openDialog() {
     this.dialog.open(InputPopupComponent, {
-      data: {
-        animal: 'panda',
-      },
     });
     this.toggleActive(6);
-  }
+  } 
+test(){
+  const title=document.querySelectorAll('.stepword'); 
+(  title[0] as HTMLElement).style.color='red'
+  console.log(title);
+  
+}
 }
 
 

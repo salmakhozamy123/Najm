@@ -5,10 +5,12 @@ import { InputsRoutingModule } from './inputs-routing.module';
 import { CalendarComponent } from './calendar/calendar.component';
 import { SelectComponent } from './select/select.component';
 import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { InputGroupComponent } from './input-group/input-group.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextinputComponent } from './textinput/textinput.component';
 
 
 @NgModule({
@@ -17,13 +19,16 @@ import { InputGroupComponent } from './input-group/input-group.component';
     SelectComponent,
     UploadFileComponent,
     TextareaComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    TextinputComponent
   ],
   imports: [
     CommonModule,
     InputsRoutingModule,
-    CalendarModule,
     FormsModule,
+    // BrowserAnimationsModule,
+    CalendarModule,
+    ReactiveFormsModule
   ],
   exports:[
     SelectComponent,

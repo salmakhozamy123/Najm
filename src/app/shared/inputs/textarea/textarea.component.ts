@@ -10,5 +10,7 @@ export class TextareaComponent {
   @Input() label:string = 'يرجي كتابة نوع البلاغ'
   @Input() placeholder:string = 'اكتب نص البلاغ هنا ...'
   @Input() iconappear:boolean = false;
+  @Input() isIconAppear = true;
+
   isCheckboxChecked = true;
 }

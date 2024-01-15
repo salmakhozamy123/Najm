@@ -14,7 +14,7 @@
     border: 2px solid #bdbdbd;
     outline: none !important;
   }
-  #desc {
+  /* #desc {
     color: #1E1E1E;
     text-align: right;
     font-family: Tajawal;
@@ -22,6 +22,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+} */
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+.form-check-label {
+  /* font-size: 15px; */
 }
 .form-check-input:checked {
   background-color: #33835C;
@@ -31,4 +42,16 @@
   border-color: #33835C;
   outline: 0;
   box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.584);
+}
+.form-check {
+  color: #1E1E1E;
+  text-align: right;
+  font-family: Tajawal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
 }

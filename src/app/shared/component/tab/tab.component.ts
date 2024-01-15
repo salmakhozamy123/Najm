@@ -12,7 +12,7 @@ export class TabComponent {
   @Input() Padding:string = '20px'
   @Input() titleAppear:boolean = true
   @Input() backgroundColor:string = '#EFEFEF'
-  index: number = 0;
+  index: number = 1;
 
   changeTab(tabIndex: any) {
     this.index = tabIndex

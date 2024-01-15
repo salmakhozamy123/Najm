@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarServiceService } from 'src/app/shared/core/navbar-service.service';
 
 @Component({
   selector: 'app-about',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  constructor(public navservice:NavbarServiceService) {
+    navservice.visible = true;
+  }
 }
