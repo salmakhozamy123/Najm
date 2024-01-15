@@ -3,7 +3,7 @@
     <ng-content select="[title]"></ng-content>
 <div class="d-flex">
     <div class="title" >طريقة العرض</div>
-<div class="d-flex " *ngIf="appearTab">
+<div class="d-flex " style="cursor: pointer;" *ngIf="appearTab">
     <div [class.active]="index === 0" (click)="changeTab(0)" class="button">
      <i class="bi bi-grid" style="font-size: 17px;"></i> افقية</div>
     <div [class.active]="index === 1" (click)="changeTab(1)" class="button">

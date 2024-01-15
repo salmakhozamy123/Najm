@@ -12,9 +12,7 @@
 }
 .box {
     border-radius: 10px;
-    border: 1px solid #E6E6E6;
     background: #FFF;
-    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -38,8 +36,7 @@
 .accordion-item {
     border: none;
 }
-.accordion-collapse {
-}
+
 .accordion-body {
     padding:16px 0px;
  }

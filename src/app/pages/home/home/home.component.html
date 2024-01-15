@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img id="logoImage" src="assets/logo.svg"/>
-    <div id="homeCard">
-        <div id="homeText">من فضلك, اختر نوع المستخدم</div>
-        <img style="width: 100%;" src="assets/Line.svg"/>
-          <div class="col-12 cardds">
-            <div [class.activecardd]="activeDiv === 'reportRef'" class="col-6 cardd" (click)="toggleActive('reportRef')">مراجع البلاغات   
-             <img *ngIf="activeDiv === 'reportRef'" class="checkicon" src="assets/check.svg"/>
-            </div>
-            <div [class.activecardd]="activeDiv == 'visitor'" class="col-6 cardd" (click)="toggleActive('visitor')">زائر
-              <img *ngIf="activeDiv == 'visitor'" class="checkicon" src="assets/check.svg"/>
-            </div>
-            <div [class.activecardd]="activeDiv === 'auditor'" class="col-6 cardd" (click)="toggleActive('auditor')">مدقق الحسابات
-            <img *ngIf="activeDiv === 'auditor'" class="checkicon" src="assets/check.svg"/>
-            </div>
-            <div [class.activecardd]="activeDiv === 'reportAuditor'" class="col-6 cardd" (click)="toggleActive('reportAuditor')">مدقق البلاغات
-            <img *ngIf="activeDiv === 'reportAuditor'" class="checkicon" src="assets/check.svg"/>
-            </div>
-          </div>
-          <img style="width: 100%;" src="assets/Line.svg"/>
-          <button [class.activebutton]="activeDiv !== null" [disabled]="isButtonDisabled" class="btn button" (click)="navigateTo()">التالي</button>
+
+    <div class="main">
+      <img id="logoImage" src="assets/logo.svg"/>
+      <div id="card">
+        <div class="cards col-12" >
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv == 'visitor'"  (click)="toggleActive('visitor')">
+                <img *ngIf="activeDiv == 'visitor'" class="checkicon" src="assets/check.svg"/> زائر</div>
+              
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'reportRef'"  (click)="toggleActive('reportRef')">
+              <img *ngIf="activeDiv === 'reportRef'" class="checkicon" src="assets/check.svg"/>مراجع البلاغات</div>
+
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'reportAuditor'" (click)="toggleActive('reportAuditor')">
+              <img *ngIf="activeDiv === 'reportAuditor'" class="checkicon" src="assets/check.svg"/>مدقق البلاغات</div>
+      
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'auditor'"  (click)="toggleActive('auditor')"> 
+              <img *ngIf="activeDiv === 'auditor'" class="checkicon" src="assets/check.svg"/> مدقق الحسابات</div>   
+            
+        </div>
+        <app-full-button title="التالي" class="w-50" [enable]="isButtonDisabled" (click)="navigateTo()"></app-full-button>
+        
+      </div>
     </div>
 
-   
-</body>
-</html>
 

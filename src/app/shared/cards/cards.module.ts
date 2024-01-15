@@ -19,6 +19,11 @@ import { AccordionModule } from '../accordion/accordion.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { ComponentModule } from '../component/component.module';
+import { TabCardComponent } from './tab-card/tab-card.component';
+import { RefreportdataComponent } from './refreportdata/refreportdata.component';
+import { AuditorrepdataComponent } from './auditorrepdata/auditorrepdata.component';
+import { audit } from 'rxjs';
+import { PhotoAndFilesComponent } from './photo-and-files/photo-and-files.component';
 
 
 @NgModule({
@@ -29,7 +34,11 @@ import { ComponentModule } from '../component/component.module';
     GrayestablishcardComponent,
     GrayCardComponent,
     DataviewcardComponent,
-    DocumentsSupportingTheSuspicionComponent
+    DocumentsSupportingTheSuspicionComponent,
+    TabCardComponent,
+    RefreportdataComponent,
+    AuditorrepdataComponent,
+    PhotoAndFilesComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +57,11 @@ import { ComponentModule } from '../component/component.module';
     WhiteCardComponent,
     GrayestablishcardComponent,
     DataviewcardComponent,
-    DocumentsSupportingTheSuspicionComponent
+    DocumentsSupportingTheSuspicionComponent,
+    TabCardComponent,
+    AuditorrepdataComponent,
+    RefreportdataComponent,
+    PhotoAndFilesComponent
   ]
 })
 export class CardsModule { }

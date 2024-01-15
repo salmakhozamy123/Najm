@@ -1,9 +1,9 @@
 <div class="contain">
   <div>
-     <div class="title">البلاغات</div>
-     <div class="d-flex justify-content-between align-items-center mb-4">
-       <div><app-breadcrumb></app-breadcrumb></div>
-       <app-semitransparent-button></app-semitransparent-button>
+     <div class="maintitle">البلاغات</div>
+     <div  class=" d-flex justify-content-between align-items-center mb-4">
+       <div ><app-breadcrumb></app-breadcrumb></div>
+       <app-semitransparent-button routerLink="/report-references" icon="arrow-left"></app-semitransparent-button>
      </div>
  
      <app-grayestablishcard>
@@ -19,6 +19,12 @@
         </div>
       </ng-container>
      </app-grayestablishcard>
+
+   <div class="col-12 w-100 d-flex justify-content-end gap-4 mt-4" >
+    <app-blue-button paddingg="0px 20px" title="إعادة توجيه"></app-blue-button>
+    <app-green-button paddingg="5px 20px" (click)="openDialog()" title="قبول" ></app-green-button>
+    <app-semitransparent-button paddingg="5px 20px" (click)="openRefuseDialog()" name="رفض"></app-semitransparent-button>
+   </div>
   </div>
  </div>
  

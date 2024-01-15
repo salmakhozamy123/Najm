@@ -16,7 +16,7 @@ import { CardsModule } from './shared/cards/cards.module';
 import { CoreModule } from './shared/core/core.module';
 import { StepperModule } from './shared/stepper/stepper.module';
 import { MatStepperModule } from '@angular/material/stepper';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountModule } from './pages/account/account.module';
 
 @NgModule({
@@ -39,10 +39,14 @@ import { AccountModule } from './pages/account/account.module';
     InputsModule,
     BrowserAnimationsModule,
     MatStepperModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [
+    FormsModule,
+    ReactiveFormsModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

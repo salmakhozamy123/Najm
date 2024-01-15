@@ -29,15 +29,29 @@
     color: #FFF;
     border: 1px solid #33835C;
     background: #33835C;
+    /* background-color: #F6F6F6 !important; */
+    /* padding-bottom: 30px; */
+    /* border-radius: 10px; */
 }
 
-.tab-content> div.active {
+.tab-content > div.active {
     display: block;
-    background-color: backgroundColor;
+    /* background-color: #EFEFEF; */
+    border-radius: 10px;
+    padding-bottom: 40px;
+    background-color: #F6F6F6;
     border: none;
     margin-top: 44px;
 }
-.tab-content> div {
+.tab-content > div.active:last-child {
+    background-color: F6F6F6;
+    border-radius: 10px;
+    padding: 32px;
+    border: none;
+    margin-top: 44px;
+
+}
+.tab-content > div {
     display: none;
 }
 .title {

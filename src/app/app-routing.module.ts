@@ -7,7 +7,7 @@ import { HomeComponent } from './pages/home/home/home.component';
 const routes: Routes =  [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
-  {path:'reports-auditor',loadChildren:()=>import('./pages/reports-auditor/reports-auditor.module').then(m=>m.ReportsAuditorModule)},
+  {path:'report-auditor',loadChildren:()=>import('./pages/reports-auditor/reports-auditor.module').then(m=>m.ReportsAuditorModule)},
   {path:'visitor',loadChildren:()=>import('./pages/visitor/visitor.module').then(m=>m.VisitorModule)},
   {path:'report-references',loadChildren:()=>import('./pages/report-references/report-references.module').then(m=>m.ReportReferencesModule)},
   {path:'auditor',loadChildren:()=>import('./pages/auditor/auditor.module').then(m=>m.AuditorModule)},

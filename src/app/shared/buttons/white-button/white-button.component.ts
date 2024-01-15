@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./white-button.component.css']
 })
 export class WhiteButtonComponent {
- @Input() title:string = '';
+ @Input() title:string = 'fghj';
 }

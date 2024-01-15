@@ -1,7 +1,11 @@
 <app-img-nav></app-img-nav>
 <div class="contain">
-    <div id="title">تقديم بلاغ</div>
-    <img src="assets/VRL.svg" />
+    <diV>
+        <div id="title" class="pb-1">تقديم بلاغ</div>
+        <img src="assets/VRL.svg" />
+    </diV>
+
+
 
     <app-stepper [linearModeSelected]="false">
         <cdk-step [label]="'تصنيف البلاغ'">
@@ -19,4 +23,47 @@
     </app-stepper>
 
 
+    <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+      </button>
+      <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step>
+            <ng-template matStepLabel>تصنيف البلاغ</ng-template>
+                <app-report-classification></app-report-classification>
+            <div class="buttons">
+              <button  class="back" mat-button matStepperPrevious>رجوع</button>
+              <button [disabled]="activeDivsData.length === 0" class="front" mat-button matStepperNext>التالي</button>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>نوع البلاغ</ng-template>
+            <app-report-type></app-report-type>
+            <div class="buttons">
+              <button mat-button matStepperPrevious>رجوع</button>
+              <button mat-button matStepperNext>التالي</button>
+            </div>
+          </mat-step>
+
+          <mat-step>
+            <ng-template matStepLabel>بيانات البلاغ</ng-template>
+            <app-report-data></app-report-data>
+            <div class="buttons">
+              <button mat-button matStepperPrevious>رجوع</button>
+              <button mat-button matStepperNext>التالي</button>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>بيانات البلاغ</ng-template>
+            <app-report-preview></app-report-preview>
+            <div class="buttons">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+      
+      </mat-stepper> -->
+
+   
+
 </div>
+<!-- [linearModeSelected]="false" -->

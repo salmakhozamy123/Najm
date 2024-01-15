@@ -1,0 +1,46 @@
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">رقم البلاغ</th>
+          <th scope="col">نوع البلاغ</th>
+          <th scope="col">تاريخ البلاغ</th>
+          <th scope="col">عمر البلاغ</th>
+          <th scope="col">المدينة</th>
+          <th scope="col">الإدارة </th>
+          <th scope="col">الحالة</th>
+          <th scope="col">الفعاليات</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let report of getPaginatedReports()">
+        <tr>
+          <td>{{report.reportNo}}</td>
+          <td>{{report.reportType}}</td>
+          <td>{{report.reportDate}}</td>
+          <td>{{report.reportAge}}</td>
+          <td>{{report.country}}</td>
+          <td>{{report.adminst}}</td>
+          <td><div class="status" [ngClass]="{'orange': report.status === 'تحت الدراسة', 'gray': report.status === 'مغلقة',
+           'green': report.status === 'جديد', 'blue':report.status === 'مقبول', 'red':report.status === 'مرفوض'}">{{report.status}}</div></td>
+          <td><div (click)="viewReport(report.reportNo)" style="cursor: pointer;"> عرض<img src="assets/viewicon.svg" class="pe-1"/></div></td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+  </div>
+  
+  
+  <div class="pagination card flex justify-content-center">
+    <p-paginator  (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="reports.length">
+      <!-- <ng-template let-pageInfo="pageInfo" pTemplate="paginatorResult">
+        <span class="p-paginator-current" *ngIf="pageInfo.paginator.getPage() === pageInfo.page + 1" [ngClass]="{'active': pageInfo.paginator.getPage() === pageInfo.page + 1}">
+            {{ pageInfo.page + 1 }}
+        </span>
+        <a class="p-paginator-pages p-link" (click)="pageInfo.onClick($event, pageInfo.page)" [ngClass]="{'active': pageInfo.paginator.getPage() === pageInfo.page + 1}">
+          {{ pageInfo.page + 1 }}
+        </a>
+      </ng-template> -->
+    </p-paginator>
+  </div>
+  

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { selectValidator } from 'src/app/shared/inputs/select/select.component';
 
@@ -7,18 +7,22 @@ import { selectValidator } from 'src/app/shared/inputs/select/select.component';
   templateUrl: './report-data.component.html',
   styleUrls: ['./report-data.component.css']
 })
-export class ReportDataComponent {
+export class ReportDataComponent implements OnInit {
+  reportdataForm:any;
+  ngOnInit(): void {
+    this.reportdataForm = new FormGroup({
+      country: new FormControl('',[Validators.required]),
+      branch: new FormControl('',[Validators.required]),
+      Administration: new FormControl('', [selectValidator()]),
+      chanel: new FormControl('',[Validators.required]),
+    }) 
+  }
   outputValue:string = ''
   username:string = ''
   usernames:string[] = []
   urls=[];
   
-  reportdataForm = new FormGroup({
-    country: new FormControl('',[Validators.required]),
-    branch: new FormControl('',[Validators.required]),
-    Administration: new FormControl('', [selectValidator()]),
-    chanel: new FormControl('',[Validators.required]),
-  })
+   
 
 formOperation(e: Event) {
   e.preventDefault();
@@ -47,7 +51,12 @@ formOperation(e: Event) {
     if (this.username.trim() !== '') {
       this.usernames.push(this.username);
       this.username = ''; // Clear the input after adding the username
+      console.log(this.usernames)
+      console.log("Ssalma");
+      
     }
+    console.log(this.username);
+    
   }
   
   removeUsername(user: string) {

@@ -14,12 +14,13 @@ import { StepperModule } from 'src/app/shared/stepper/stepper.module';
 import { InputsModule } from 'src/app/shared/inputs/inputs.module';
 import { FormsModule,  } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import {NgIf} from '@angular/common';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgIf} from '@angular/common';
+import { MatButtonModule} from '@angular/material/button';
+import { MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { ReportPreviewComponent } from './report-preview/report-preview.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PopupModule } from 'src/app/shared/popup/popup.module';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDialogModule,
     ButtonsModule,
     ReactiveFormsModule,
+    // PopupModule
   ],
   exports:[
     AboutComponent,
